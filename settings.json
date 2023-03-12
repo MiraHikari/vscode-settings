@@ -1,6 +1,6 @@
 /*
   Visual Studio Code Settings File (settings.json)
-  Updated at 2023-3-11
+  Updated at 2023-3-12
 */
 
 {
@@ -13,9 +13,6 @@
   "workbench.preferredDarkColorTheme": "One Dark Pro Mix",
   "workbench.preferredLightColorTheme": "Moegi Light Vitesse",
   "workbench.list.smoothScrolling": true,
-
-  // Diff
-  "diffEditor.ignoreTrimWhitespace": false,
 
   // Editor
   "editor.fontWeight": "normal",
@@ -38,11 +35,6 @@
   "editor.tabSize": 2,
   "editor.formatOnType": true,
   "editor.wordWrap": "on",
-  "editor.codeActionsOnSave": {
-    "source.fixAll": false,
-    "source.fixAll.eslint": true,
-    "source.organizeImports": false
-  },
   "editor.inlineSuggest.enabled": true,
   "editor.cursorBlinking": "smooth",
   "editor.suggest.preview": true,
@@ -50,44 +42,16 @@
   "editor.tabCompletion": "on",
   "editor.mouseWheelZoom": true,
   "editor.fontVariations": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": false,
+    "source.fixAll.eslint": true, // auto fix by eslint
+    "source.organizeImports": false
+  },
   "editor.tokenColorCustomizations": {
-    "textMateRules": [
-      {
-        "scope": "keyword.other.dotenv",
-        "settings": {
-          "foreground": "#FF000000"
-        }
-      }
-    ]
+    "textMateRules": []
   },
   "editor.quickSuggestions": {
     "strings": "on"
-  },
-
-  // Editor - Default formatter
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[scss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
   // Editor - Language specific
@@ -99,6 +63,29 @@
   "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
   "javascript.inlayHints.parameterNames.enabled": "all",
 
+  /*
+   * Editor - Default formatter: Prettier
+   * Work with eslint, markdownlint
+   */
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json5]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
+
   // Explorer
   "explorer.confirmDelete": false,
   "explorer.fileNesting.expand": false,
@@ -106,7 +93,7 @@
   "explorer.fileNesting.enabled": true,
   "explorer.incrementalNaming": "smart",
   "explorer.fileNesting.patterns": {
-    /* Powered by Diu */ "*.asax": "$(capture).*.cs, $(capture).*.vb",
+    /* Powered by antfu */ "*.asax": "$(capture).*.cs, $(capture).*.vb",
     "*.ascx": "$(capture).*.cs, $(capture).*.vb",
     "*.ashx": "$(capture).*.cs, $(capture).*.vb",
     "*.aspx": "$(capture).*.cs, $(capture).*.vb",
@@ -230,7 +217,7 @@
   // JSON features
   "json.trace.server": "verbose",
 
-  /* VSCode - End */
+  /* ↑ VSCode - End ↑ */
 
   /* ↓ Extensions Settings ↓ - Start */
 
@@ -239,6 +226,7 @@
   "oneDarkPro.editorTheme": "One Dark Pro Mix",
 
   // Prettier
+  "prettier.enable": true,
   "prettier.arrowParens": "avoid",
   "prettier.bracketSameLine": true,
   "prettier.endOfLine": "auto",
@@ -323,29 +311,16 @@
   // cSpell
   "cSpell.allowCompoundWords": true,
   "cSpell.language": "en,en-US",
-  "cSpell.userWords": [
-    "autofetch",
-    "axios",
-    "doxdocgen",
-    "esbenp",
-    "Fastify",
-    "htmltagwrap",
-    "intellicode",
-    "Moegi",
-    "nestjs",
-    "oicq",
-    "Parens",
-    "reduxjs",
-    "solidjs",
-    "tabnine",
-    "tailwindcss",
-    "Vitesse",
-    "vsintellicode"
-  ],
+  "cSpell.userWords": ["Anson", "antfu", "autofetch", "axios", "doxdocgen", "esbenp", "Fastify", "htmltagwrap", "intellicode", "Moegi", "nestjs", "oicq", "Parens", "reduxjs", "solidjs", "tabnine", "tailwindcss", "Vitesse", "vsintellicode"],
 
   // ESLint
   "eslint.codeActionsOnSave.mode": "problems",
-  "eslint.format.enable": true,
+  "eslint.quiet": true,
+  "eslint.packageManager": "pnpm",
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+  "eslint.validate": ["javascript", "typescript", "javascriptreact", "typescriptreact", "vue"],
 
   // Color Highlight
   "color-highlight.languages": ["*"],
@@ -364,5 +339,5 @@
   // HTML Tag Wrap
   "htmltagwrap.tag": "div"
 
-  /* Extension settings - End */
+  /* ↑ Extension settings - End ↑ */
 }
