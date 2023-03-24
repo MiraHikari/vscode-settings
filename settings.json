@@ -1,13 +1,14 @@
 /*
   Visual Studio Code Settings File (settings.json)
-  Updated at 2023-3-12
+  Updated at 2023-3-24
 */
 
 {
   /* ↓ Visual Studio Code Settings ↓ - Start */
 
   // Workbench
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.productIconTheme": "fluent-icons",
   "workbench.editor.closeOnFileDelete": true,
   "workbench.colorTheme": "One Dark Pro Mix",
   "workbench.preferredDarkColorTheme": "One Dark Pro Mix",
@@ -84,6 +85,12 @@
   },
   "[markdown]": {
     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
   // Explorer
@@ -236,9 +243,6 @@
   "prettier.printWidth": 280,
   "prettier.resolveGlobalModules": true,
 
-  // Material
-  "material-icon-theme.activeIconPack": "react_redux",
-
   // IntelliCode
   "vsintellicode.modify.editor.suggestSelection": "choseToUpdateConfiguration",
   "vsintellicode.features.python.deepLearning": "enabled",
@@ -311,7 +315,7 @@
   // cSpell
   "cSpell.allowCompoundWords": true,
   "cSpell.language": "en,en-US",
-  "cSpell.userWords": ["Anson", "antfu", "autofetch", "axios", "doxdocgen", "esbenp", "Fastify", "htmltagwrap", "intellicode", "Moegi", "nestjs", "oicq", "Parens", "reduxjs", "solidjs", "tabnine", "tailwindcss", "Vitesse", "vsintellicode"],
+  "cSpell.userWords": ["Anson", "antfu", "autofetch", "axios", "doxdocgen", "esbenp", "Fastify", "htmltagwrap", "intellicode", "Moegi", "nestjs", "oicq", "Parens", "pinia", "reduxjs", "solidjs", "tabnine", "tailwindcss", "typeorm", "Vitesse", "vsintellicode", "wopan"],
 
   // ESLint
   "eslint.codeActionsOnSave.mode": "problems",
@@ -326,6 +330,12 @@
   "color-highlight.languages": ["*"],
   "color-highlight.markerType": "underline",
 
+  // VSCode Icon
+  "vsicons.presets.tsOfficial": true,
+  "vsicons.projectDetection.autoReload": true,
+  "vsicons.presets.jsOfficial": true,
+  "vsicons.presets.hideExplorerArrows": false, // because i had configured the explorer file nesting, so i need to show the arrows.
+
   // ErrorLens
   "errorLens.fontWeight": "600",
   "errorLens.fontSize": "14",
@@ -335,6 +345,9 @@
   "errorLens.messageTemplate": "$severity - $message",
   "errorLens.severityText": ["ERROR", "WARN", "INFO", "HINT"],
   "errorLens.enabledDiagnosticLevels": ["error", "warning", "info", "hint"],
+
+  // Svelte
+  "svelte.enable-ts-plugin": true,
 
   // HTML Tag Wrap
   "htmltagwrap.tag": "div"
