@@ -1,0 +1,21 @@
+{
+  "name": "json",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.37.0",
+    "@types/node": "^18.15.7",
+    "eslint": "^8.36.0",
+    "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
