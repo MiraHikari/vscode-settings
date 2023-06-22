@@ -2,15 +2,17 @@
   "name": "auto-get-extension-id",
   "version": "1.0.0",
   "description": "Get the extension ID automatically.",
-  "main": "index.js",
+  "main": "index.cjs",
   "scripts": {
-    "start": "node ./index.js"
+    "start": "node ./index.cjs"
   },
-  "keywords": ["noting"],
+  "keywords": [
+    "noting"
+  ],
   "author": "Gong_cx",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^18.15.7",
+    "@types/node": "^20.3.1"
   },
   "dependencies": {
     "lodash": "^4.17.21"
